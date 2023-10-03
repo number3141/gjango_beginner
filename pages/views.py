@@ -1,16 +1,20 @@
 # Разрабатываем логику запроса/ответа для нашего веб-приложения 
-
-from re import template
 from django.shortcuts import render
 
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+
+from .models import Post
 
 # Create your views here.
 
 
-class HomePageView(TemplateView):
+class HomePageView(ListView):
     # template_name - зарезервированное имя 
     template_name = 'home.html'
 
+    model = Post
+
 class AboutView(TemplateView):
     template_name = 'about.html'
+
+
