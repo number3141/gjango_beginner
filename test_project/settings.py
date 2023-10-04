@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from ntpath import join
 import os
 
 from pathlib import Path
@@ -69,6 +70,8 @@ TEMPLATES = [
         },
     },
 ]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')] # Добавил
 
 WSGI_APPLICATION = 'test_project.wsgi.application'
 

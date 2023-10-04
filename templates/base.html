@@ -1,10 +1,19 @@
-<header>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        
+    </head>
+<body>
 
-    <a href="{% url 'home' %}">Главная</a>
-    <a href="{% url 'about' %}">О нас</a>
+    <header>
 
-</header>
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'about' %}">О нас</a>
+    
+    </header>
 
-
+<!-- КОНТЕНТ С ДРУГИХ СТРАНИЦ! -->
 {% block content %}
 {% endblock %}
